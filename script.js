@@ -72,3 +72,9 @@ botaoResposta.addEventListener("click", () => {
 })
 
 //Questão 8
+function limparCPF(){
+    const cpfComFormatacao = document.getElementById("cpfInput").value;
+    const cpfApenasNumeros = cpfComFormatacao.replace(/\D/g, '');
+    document.getElementById("resultado9").innerText = cpfApenasNumeros;
+
+}
