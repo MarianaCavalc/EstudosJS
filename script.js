@@ -72,9 +72,12 @@ botaoResposta.addEventListener("click", () => {
 })
 
 //Questão 8
-function limparCPF(){
-    const cpfComFormatacao = document.getElementById("cpfInput").value;
-    const cpfApenasNumeros = cpfComFormatacao.replace(/\D/g, '');
-    document.getElementById("resultado9").innerText = cpfApenasNumeros;
-
+function verficarSpoiler(){
+    const frase = document.getElementById("fraseInput").value;
+    const temSpoiler = frase.toLowerCase().includes("spoiler");
+    if (temSpoiler){
+        document.getElementById("resultado8"). innerText = "Cuidade, a frase contém spoiler";
+    }else {
+        document.getElementById("resultado8"). innerText = "Ufa, tudo limpo!";}
 }
+   
