@@ -81,3 +81,21 @@ function verficarSpoiler(){
         document.getElementById("resultado8"). innerText = "Ufa, tudo limpo!";}
 }
    
+//Questão 9 
+function limparCPF(){
+    const cpfComFormatacao = document.getElementById("cpfInput").value;
+    const cpfApenasNumeros = cpfComformatacao.replace(/\D/g, "");
+    document.getElementById("resultado9").innerText = cpfApenasNumeros;
+}
+
+//Questão 10
+function processar (){
+    let texto = document.getElementById("frutas").value;
+    if (/[^a-zA-Zà-úÀ-Ú\s,]/.test(texto)) {
+        alert("Não use números ou caracteres especiais!");
+        return;
+    }
+    let lista = texto.split(',').map(fruta => fruta.trim());
+    document.getElementById("resultado").innerText = lista.join('\n');
+    }
+    
